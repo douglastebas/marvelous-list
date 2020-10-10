@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvelous List</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./views/characters/characters.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="https://www.objective.com.br/wp-content/uploads/2017/08/cropped-objective-solutions-icone-32x32.png" sizes="32x32">
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="nav__link" href="https://www.objective.com.br/" target="_blank">
+        <img class="logo" src="https://www.objective.com.br/wp-content/uploads/2017/03/objective-empresa-de-desenvolvimento-de-software-metodologia-agil.png" alt="Objective">
+      </a>
+      <div class="nav-right">
+        <a class="nav__link" href="https://www.linkedin.com/in/douglastebas/" target="_blank">
+          <span class="info-font">
+            <strong>
+              Douglas F. S. Tebas
+            </strong>
+            <br />
+            Teste de Front-end
+          </span>
+        </a>
+        <a class="nav__link">
+          <button class="btn-initials">
+            <strong>DT</strong>
+          </button>
+        </a>
+        
+        </a>
+      </div>
+    </nav>    
+    <div id="listContainer" class="container">
+      <div id="divSearch" class="row searchDiv">
+        <div class="col col-2">
+          <h1 class="searchTitle">Busca de personagens</h1>
+          <p class="labelSearch">
+            Nome do personagem
+          </p>
+          <div class="divInputSearch">
+            <input id="inputSearch" class="inputSearch" type="text" onkeyup="search()" placeholder="Search" />
+            <i class="iconInputSearch material-icons">search</i>
+          </div>
+        </div>
+      </div>
+
+      <div id="paginate" class="row"> 
+        <div class="container">
+          <div class="col col-3 center legend">
+            <span class="info-font">Personagem</span>
+          </div>
+          <div class="col col-3 center d-none-mobile info-font">
+            Séries
+          </div>
+          <div class="col col-3 center d-none-mobile info-font">
+            Eventos
+          </div>
+        </div>
+        <!-- </div> -->
+        <div id="divListOfCharacter" class="list">
+        </div>
+        <div id="divPagination" class="pagination footer">
+          <div class="first">&#171;</div>
+          <div class="prev">&lt;</div>
+          <div class="numbers">
+            <div>1</div>
+          </div>
+          <div class="next">&gt</div>
+          <div class="last">&#187;</div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="divLoading" class="load-bar">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    
+    <div id="divDetails" class="container">
+      <div class="row">
+        <div class="col-3">
+          <button class="backButton" onclick="backToList()">Back to list</button>
+        </div>
+        <div class="row" id="divInfos"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="divTitle">Appearances</div>
+        </div>
+        <div id="divAppearances" class="row"></div>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script src="main.js"></script>
+    <script src="./views/characters/list.js"></script>
+    <script src="./views/characters/details.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
